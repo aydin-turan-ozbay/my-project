@@ -222,18 +222,19 @@ body {
 }
 
 .car::before {
-  content: "SALE";
+  content: "VIP";
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color:red;
-  color: #fff;
+  background-color:gold;
+  color: rgb(196, 56, 196);
   padding: 5px 10px;
   font-size: 12px;
   font-weight: bold;
   border-radius: 5px;
   z-index: 10;
 }
+
 
 .car:hover {
   transform: translateY(-5px);
@@ -697,3 +698,4 @@ body {
   .footer-col ul li,
   .footer-bottom p{ font-size:16px; }
 }
+
