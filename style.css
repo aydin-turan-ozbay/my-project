@@ -195,226 +195,85 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+main {
+    flex: 1;
+    margin-top: 80px;
+    padding: 20px;
 
-
-
-#arabalar {  
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  align-items: stretch;
-
-  
 }
 
-.car {
-  position: relative;
+ h1 {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    color: #d946ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+
+
+ p {
+    margin-top: 20px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255) ;
+}
+
+.containers {
+    
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 140px ;
+
+}
+
+.cont {
   background-color: #2c2e3e;
-  border: 1px solid gray;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 400px; /* optional */
-  margin: 20px auto;
-  
+   /* Yükseklik ayarları */
+  min-height: 200px; /* Eskisi 300’dü */
+  height: 100%;
+  padding: 5px; /* İçeriği genişletir */
 }
 
-.car::before {
-  content: "VIP";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color:gold;
-  color: rgb(196, 56, 196);
-  padding: 5px 10px;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 5px;
-  z-index: 10;
-}
-
-
-.car:hover {
+.cont:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(141, 133, 133, 0.1);
+  box-shadow: 0px 8px 20px rgba(107, 99, 99, 0.1);
 }
 
-.car img {
-  width: 100%;
-  height: 180px;
-  border-bottom: 1px solid #c5a9a9;
+.cont img {
+    padding: 10px ;
+    border-radius: 26px;}
+
+.cont h2 {
+
+    color: #ba55d3;
 }
 
-.car p {
-  margin: 15px 10px 5px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #ffffff;
+.cont p {
+    margin: 15px 10px 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
 }
 
-.car span {
-  display: block;
-  margin-bottom: 15px;
-  font-size: 20px;
-  color: rgb(59, 187, 43);
-  font-weight: 1000;
+.cont li {
+    margin: 5px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
 }
-
-.info-box {
-  display: flex;
-  justify-content: space-between;
-  background-color: #1e2235;
-  padding: 8px 12px;
-  margin: 5px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  color: white;
-}
-
-.info-box .price {
-  color: rgb(196, 56, 196); /* purple price */
-}
-
-.info-box span {
-  color: #a9b1d6;
-}
-
-/* New grid container for buttons */
-.button-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 10px;
-  width: 80%;
-  margin: 0 auto 20px;
-}
-
-.button-grid button {
-  padding: 5px ;
-  background-color: rgb(189, 109, 77);
-  border: 1px solid #030300;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 200;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  color: rgb(0, 0, 0);
-  box-sizing: border-box;
-}
-
-.button-grid button:hover {
-  filter: brightness(85%);
-}
-
-.button-grid button a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.button-grid button:nth-child(1) {
-  background-color: rgb(182, 3, 3);
-  color: black;
-}
-
-.button-grid button:nth-child(2) {
-  background-color: white;
-  color: black;
-}
-
-.button-grid button:nth-child(3) {
-  background-color: rgb(31, 192, 31);
-  color: black;
-}
-
-.button-grid button:nth-child(4) {
-  background-color: aqua;
-  color: black;
-}
-
-.details {
-  padding-bottom: 15px;
-}
-
-.details button { 
-  padding: 5px;
-  background-color: rgb(196, 56, 196);
-  border: 1px solid #030300;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 200;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 40%;
-  box-sizing: border-box;
-}
-
-.details button:hover {
-  filter: brightness(85%);
-}
-
-.details  a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-}
-
-.pagination a {
-  color: white;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  margin: 0 4px;
-  background-color: rgb(229, 192, 229)a;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.pagination a:hover:not(.active) {
-  background-color: rgb(196, 56, 196);
-}
-
-.pagination a.active {
-  background-color: rgb(196, 56, 196);
-  color: white;
-}
-
-
- h1{
-  color: #d946ef	;
-  margin: 10px;
-  padding: 0px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-
-}
-
-
- p {
-  color: rgb(255, 255, 255);
-  margin: 10px;
-  padding: 0px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
 
 .footer {
   background-color: var(--footer-bg);
@@ -699,3 +558,96 @@ body {
   .footer-bottom p{ font-size:16px; }
 }
 
+
+
+
+
+
+/* Tablet görünümü (768px ve altı) */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  main h1 {
+    font-size: 36px;
+    text-align: center;
+    height: auto;
+  }
+
+  main p {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .containers {
+    padding: 20px;
+    grid-template-columns: 1fr; /* 1 sütun */
+  }
+
+  .cont {
+    padding: 20px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+/* Telefon görünümü (480px ve altı) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links a,
+  .dropbtn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  main h1 {
+    font-size: 28px;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+
+  .containers {
+    padding: 10px;
+  }
+
+  .cont {
+    padding: 15px;
+  }
+
+  .footer p {
+    font-size: 13px;
+  }
+}
