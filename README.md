@@ -1,1 +1,1 @@
-# my-proje
+# my-project
